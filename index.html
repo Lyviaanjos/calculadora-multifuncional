@@ -9,25 +9,29 @@
 </head>
 <body>
 
-    <div class="calculadora">
+    <main class="calculadora">
         <h1>Calculadora</h1>
 
         <input type="number" id="numero1" placeholder="Primeiro número">
 
         <select id="operacao">
-            <option value="soma">Soma</option>
-            <option value="subtracao">Subtração</option>
-            <option value="multiplicacao">Multiplicação</option>
-            <option value="divisao">Divisão</option>
+            <option value="soma">Soma (+)</option>
+            <option value="subtracao">Subtração (-)</option>
+            <option value="multiplicacao">Multiplicação (×)</option>
+            <option value="divisao">Divisão (÷)</option>
         </select>
-    
 
         <input type="number" id="numero2" placeholder="Segundo número">
 
-        <button onclick="calcular()">Calcular</button>
+        <div class="botoes">
+            <button onclick="limpar()">CE</button>
+            <button onclick="porcentagem()">%</button>
+            <button onclick="adicionarVirgula()">,</button>
+            <button onclick="calcular()">=</button>
+        </div>
 
-        <h2 id="resultado">Resultado: 0</h2>
-    </div>
+        <p id="resultado">Resultado: </p>
+    </main>
 
     <script src="script.js"></script>
 </body>
