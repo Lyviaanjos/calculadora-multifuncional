@@ -8,8 +8,21 @@ function calcular() {
 
     if (operacao === "soma") {
         resultado = numero1 + numero2;
+
     } else if (operacao === "subtracao") {
         resultado = numero1 - numero2;
+
+    } else if (operacao === "multiplicacao") {
+        resultado = numero1 * numero2;
+
+    } else if (operacao === "divisao") {
+        if (numero2 === 0) {
+            document.getElementById("resultado").textContent =
+                "Não é possível dividir por zero.";
+            return;
+        }
+
+        resultado = numero1 / numero2;
     }
 
     document.getElementById("resultado").textContent =
