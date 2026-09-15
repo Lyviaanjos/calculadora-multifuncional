@@ -1,17 +1,17 @@
-function somar() {
-    let numero1 = Number(document.getElementById("numero1").value);
-    let numero2 = Number(document.getElementById("numero2").value);
 
-    let resultado = numero1 + numero2;
+function calcular() {
+    const numero1 = Number(document.getElementById("numero1").value);
+    const numero2 = Number(document.getElementById("numero2").value);
+    const operacao = document.getElementById("operacao").value;
 
-    document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
-}
+    let resultado;
 
-function subtrair() {
-    let numero1 = Number(document.getElementById("numero1").value);
-    let numero2 = Number(document.getElementById("numero2").value);
+    if (operacao === "soma") {
+        resultado = numero1 + numero2;
+    } else if (operacao === "subtracao") {
+        resultado = numero1 - numero2;
+    }
 
-    let resultado = numero1 - numero2;
-
-    document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+    document.getElementById("resultado").textContent =
+        "Resultado: " + resultado;
 }
