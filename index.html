@@ -4,35 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
     <title>Calculadora Multifuncional</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <main class="calculadora">
-        <h1>Calculadora</h1>
+        <header class="cabecalho">
+            <div class="icone-calculadora">＋</div>
+            <p class="subtitulo">CÁLCULOS SIMPLES, SEM COMPLICAÇÃO</p>
+            <h1>Calculadora</h1>
+            <p class="descricao">Faça suas contas de um jeito rápido.</p>
+        </header>
 
-        <input type="number" id="numero1" placeholder="Primeiro número">
+        <section class="campos">
+            <label for="numero1">Primeiro número</label>
+            <input type="number" id="numero1" placeholder="Ex.: 125" step="any">
 
-        <select id="operacao">
-            <option value="soma">Soma (+)</option>
-            <option value="subtracao">Subtração (-)</option>
-            <option value="multiplicacao">Multiplicação (×)</option>
-            <option value="divisao">Divisão (÷)</option>
-        </select>
+            <label for="operacao">Operação</label>
+            <select id="operacao">
+                <option value="soma">Adição (+)</option>
+                <option value="subtracao">Subtração (−)</option>
+                <option value="multiplicacao">Multiplicação (×)</option>
+                <option value="divisao">Divisão (÷)</option>
+            </select>
 
-        <input type="number" id="numero2" placeholder="Segundo número">
+            <label for="numero2">Segundo número</label>
+            <input type="number" id="numero2" placeholder="Ex.: 25" step="any">
+        </section>
 
         <div class="botoes">
-            <button onclick="limpar()">CE</button>
-            <button onclick="porcentagem()">%</button>
-            <button onclick="adicionarVirgula()">,</button>
-            <button onclick="calcular()">=</button>
+            <button class="botao-secundario" type="button" onclick="limpar()">Limpar</button>
+            <button class="botao-secundario" type="button" onclick="porcentagem()">%</button>
+            <button class="botao-secundario" type="button" onclick="adicionarVirgula()">,</button>
+            <button class="botao-principal" type="button" onclick="calcular()">Calcular <span>→</span></button>
         </div>
 
-        <p id="resultado">Resultado: </p>
+        <div class="resultado-box" aria-live="polite">
+            <span class="resultado-legenda">RESULTADO</span>
+            <p id="resultado">Aguardando cálculo...</p>
+        </div>
+
+        <footer>Calculadora Multifuncional</footer>
     </main>
 
     <script src="script.js"></script>
 </body>
 </html>
+
